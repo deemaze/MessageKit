@@ -15,7 +15,7 @@
 		1C5433DD24C389C300A5383B /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5433DC24C389C300A5383B /* MessagesView.swift */; };
 		1C5433DF24C38DBF00A5383B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5433DE24C38DBF00A5383B /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1C5433E224C3A33600A5383B /* SwiftUIExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5433E124C3A33600A5383B /* SwiftUIExampleView.swift */; };
-		29B9C8652850FA25001D180A /* InputBarAccessoryView in Frameworks */ = {isa = PBXBuildFile; productRef = 29B9C8642850FA25001D180A /* InputBarAccessoryView */; };
+		29B9C86828510DDD001D180A /* InputBarAccessoryView in Frameworks */ = {isa = PBXBuildFile; productRef = 29B9C86728510DDD001D180A /* InputBarAccessoryView */; };
 		383B9EB32172A1C4008AB91A /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B9EB22172A1C4008AB91A /* MockUser.swift */; };
 		385C2922211FF32E0010B4BA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385C2920211FF32E0010B4BA /* CustomCell.swift */; };
 		385C2923211FF32E0010B4BA /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385C2921211FF32E0010B4BA /* TableViewCells.swift */; };
@@ -125,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13EFA5D927AC5634003002CC /* Kingfisher in Frameworks */,
-				29B9C8652850FA25001D180A /* InputBarAccessoryView in Frameworks */,
+				29B9C86828510DDD001D180A /* InputBarAccessoryView in Frameworks */,
 				1C5433DF24C38DBF00A5383B /* SwiftUI.framework in Frameworks */,
 				13EFA5D727AC5631003002CC /* MessageKit in Frameworks */,
 			);
@@ -352,7 +352,7 @@
 			packageProductDependencies = (
 				13EFA5D627AC5631003002CC /* MessageKit */,
 				13EFA5D827AC5634003002CC /* Kingfisher */,
-				29B9C8642850FA25001D180A /* InputBarAccessoryView */,
+				29B9C86728510DDD001D180A /* InputBarAccessoryView */,
 			);
 			productName = ChatExample;
 			productReference = 882B5E331CF7D4B900B6E160 /* ChatExample.app */;
@@ -430,7 +430,7 @@
 			mainGroup = 882B5E2A1CF7D4B900B6E160;
 			packageReferences = (
 				13CCA06125793E24005C19BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				29B9C8632850FA25001D180A /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */,
+				29B9C86628510DDD001D180A /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */,
 			);
 			productRefGroup = 882B5E341CF7D4B900B6E160 /* Products */;
 			projectDirPath = "";
@@ -841,7 +841,7 @@
 				minimumVersion = 5.15.8;
 			};
 		};
-		29B9C8632850FA25001D180A /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */ = {
+		29B9C86628510DDD001D180A /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/deemaze/InputBarAccessoryView.git";
 			requirement = {
@@ -870,9 +870,9 @@
 			package = 13CCA06125793E24005C19BB /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		29B9C8642850FA25001D180A /* InputBarAccessoryView */ = {
+		29B9C86728510DDD001D180A /* InputBarAccessoryView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 29B9C8632850FA25001D180A /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */;
+			package = 29B9C86628510DDD001D180A /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */;
 			productName = InputBarAccessoryView;
 		};
 /* End XCSwiftPackageProductDependency section */
