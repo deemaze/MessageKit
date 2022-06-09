@@ -49,6 +49,7 @@
 		9B49D53A263D9606008804B5 /* CustomLayoutSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D539263D9606008804B5 /* CustomLayoutSizeCalculator.swift */; };
 		9B49D542263DA6F9008804B5 /* CustomMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D541263DA6F9008804B5 /* CustomMessageContentCell.swift */; };
 		9B49D547263DAA29008804B5 /* CustomTextMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D546263DAA29008804B5 /* CustomTextMessageContentCell.swift */; };
+		ABF5B04A28522D46007131F3 /* InputBarAccessoryView in Frameworks */ = {isa = PBXBuildFile; productRef = ABF5B04928522D46007131F3 /* InputBarAccessoryView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13EFA5D927AC5634003002CC /* Kingfisher in Frameworks */,
+				ABF5B04A28522D46007131F3 /* InputBarAccessoryView in Frameworks */,
 				1C5433DF24C38DBF00A5383B /* SwiftUI.framework in Frameworks */,
 				13EFA5D727AC5631003002CC /* MessageKit in Frameworks */,
 			);
@@ -350,6 +352,7 @@
 			packageProductDependencies = (
 				13EFA5D627AC5631003002CC /* MessageKit */,
 				13EFA5D827AC5634003002CC /* Kingfisher */,
+				ABF5B04928522D46007131F3 /* InputBarAccessoryView */,
 			);
 			productName = ChatExample;
 			productReference = 882B5E331CF7D4B900B6E160 /* ChatExample.app */;
@@ -427,6 +430,7 @@
 			mainGroup = 882B5E2A1CF7D4B900B6E160;
 			packageReferences = (
 				13CCA06125793E24005C19BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				ABF5B04828522D46007131F3 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */,
 			);
 			productRefGroup = 882B5E341CF7D4B900B6E160 /* Products */;
 			projectDirPath = "";
@@ -837,6 +841,14 @@
 				minimumVersion = 5.15.8;
 			};
 		};
+		ABF5B04828522D46007131F3 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/deemaze/InputBarAccessoryView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -857,6 +869,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 13CCA06125793E24005C19BB /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		ABF5B04928522D46007131F3 /* InputBarAccessoryView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABF5B04828522D46007131F3 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */;
+			productName = InputBarAccessoryView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
