@@ -56,6 +56,7 @@ open class MessageContentCell: MessageCollectionViewCell {
   open var cellTopLabel: InsetLabel = {
     let label = InsetLabel()
     label.numberOfLines = 0
+    label.adjustsFontForContentSizeCategory = true
     label.textAlignment = .center
     return label
   }()
@@ -64,6 +65,7 @@ open class MessageContentCell: MessageCollectionViewCell {
   open var cellBottomLabel: InsetLabel = {
     let label = InsetLabel()
     label.numberOfLines = 0
+    label.adjustsFontForContentSizeCategory = true
     label.textAlignment = .center
     return label
   }()
@@ -72,6 +74,7 @@ open class MessageContentCell: MessageCollectionViewCell {
   open var messageTopLabel: InsetLabel = {
     let label = InsetLabel()
     label.numberOfLines = 0
+    label.adjustsFontForContentSizeCategory = true
     return label
   }()
 
@@ -79,6 +82,7 @@ open class MessageContentCell: MessageCollectionViewCell {
   open var messageBottomLabel: InsetLabel = {
     let label = InsetLabel()
     label.numberOfLines = 0
+    label.adjustsFontForContentSizeCategory = true
     return label
   }()
 
