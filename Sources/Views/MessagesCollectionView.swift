@@ -193,7 +193,7 @@ open class MessagesCollectionView: UICollectionView {
   private var indexPathForLastItem: IndexPath? {
     guard numberOfSections > 0 else { return nil }
 
-    for offset in 1 ... numberOfSections {
+    for offset in 0 ... numberOfSections - 1 {
       let section = numberOfSections - offset
       let lastItem = numberOfItems(inSection: section) - 1
       if lastItem >= 0 {
