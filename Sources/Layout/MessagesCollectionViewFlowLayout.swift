@@ -57,6 +57,7 @@ open class MessagesCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
   lazy open var textMessageSizeCalculator = TextMessageSizeCalculator(layout: self)
   lazy open var attributedTextMessageSizeCalculator = TextMessageSizeCalculator(layout: self)
+  lazy open var attachmentTextMessageSizeCalculator = AttachmentMessageSizeCalculator(layout: self)
   lazy open var emojiMessageSizeCalculator: TextMessageSizeCalculator = {
     let sizeCalculator = TextMessageSizeCalculator(layout: self)
     sizeCalculator.messageLabelFont = UIFont.systemFont(ofSize: sizeCalculator.messageLabelFont.pointSize * 2)
@@ -138,6 +139,11 @@ open class MessagesCollectionViewFlowLayout: UICollectionViewFlowLayout {
         for: message,
         at: indexPath,
         in: messagesCollectionView) ?? attributedTextMessageSizeCalculator
+    case .attachment:
+        return messagesLayoutDelegate.attachmentTextCellSizeCalculator(
+            for: message,
+            at: indexPath,
+            in: messagesCollectionView) ?? attachmentTextMessageSizeCalculator
     case .emoji:
       return messagesLayoutDelegate
         .emojiCellSizeCalculator(for: message, at: indexPath, in: messagesCollectionView) ?? emojiMessageSizeCalculator

@@ -42,6 +42,8 @@ open class TextMessageSizeCalculator: MessageSizeCalculator {
     switch textMessageKind {
     case .attributedText(let text):
       attributedText = text
+    case  .attachment(let text, let attachments):
+        attributedText = text
     case .text(let text), .emoji(let text):
       attributedText = NSAttributedString(string: text, attributes: [.font: messageLabelFont])
     default:

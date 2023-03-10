@@ -411,6 +411,7 @@ extension AutocompleteExampleViewController: MessagesDisplayDelegate {
 // MARK: MessagesLayoutDelegate
 
 extension AutocompleteExampleViewController: MessagesLayoutDelegate {
+    
   func cellTopLabelHeight(for _: MessageType, at indexPath: IndexPath, in _: MessagesCollectionView) -> CGFloat {
     if isTimeLabelVisible(at: indexPath) {
       return 18

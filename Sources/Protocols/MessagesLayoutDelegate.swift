@@ -177,10 +177,24 @@ public protocol MessagesLayoutDelegate: AnyObject {
   ///
   /// - Note:
   ///   The default implementation will return nil. You must override this method if you are using your own cell for messages with MessageType.attributedText.
-  func attributedTextCellSizeCalculator(
+  func attachmentTextCellSizeCalculator(
     for message: MessageType,
     at indexPath: IndexPath,
     in messagesCollectionView: MessagesCollectionView) -> CellSizeCalculator?
+    
+    /// Attributed text cell size calculator for messages with MessageType.attributedText.
+    ///
+    /// - Parameters:
+    ///   - message: The attributedText message
+    ///   - indexPath: The `IndexPath` of the cell.
+    ///   - messagesCollectionView: The `MessagesCollectionView` in which this cell will be displayed.
+    ///
+    /// - Note:
+    ///   The default implementation will return nil. You must override this method if you are using your own cell for messages with MessageType.attributedText.
+    func attributedTextCellSizeCalculator(
+      for message: MessageType,
+      at indexPath: IndexPath,
+      in messagesCollectionView: MessagesCollectionView) -> CellSizeCalculator?
 
   /// Emoji cell size calculator for messages with MessageType.emoji.
   ///
@@ -348,6 +362,15 @@ extension MessagesLayoutDelegate {
   }
 
   public func emojiCellSizeCalculator(
+    for _: MessageType,
+    at _: IndexPath,
+    in _: MessagesCollectionView)
+    -> CellSizeCalculator?
+  {
+    nil
+  }
+    
+  public func attachmentTextCellSizeCalculator(
     for _: MessageType,
     at _: IndexPath,
     in _: MessagesCollectionView)

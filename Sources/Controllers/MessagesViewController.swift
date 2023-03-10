@@ -172,6 +172,10 @@ open class MessagesViewController: UIViewController, UICollectionViewDelegateFlo
       let cell = messagesCollectionView.dequeueReusableCell(LinkPreviewMessageCell.self, for: indexPath)
       cell.configure(with: message, at: indexPath, and: messagesCollectionView)
       return cell
+    case .attachment:
+      let cell = messagesCollectionView.dequeueReusableCell(MessageWithAttachmentCell.self, for: indexPath)
+      cell.configure(with: message, at: indexPath, and: messagesCollectionView)
+      return cell
     case .custom:
       return messagesDataSource.customCell(for: message, at: indexPath, in: messagesCollectionView)
     }

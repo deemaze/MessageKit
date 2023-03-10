@@ -15,6 +15,8 @@
 		1C5433DD24C389C300A5383B /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5433DC24C389C300A5383B /* MessagesView.swift */; };
 		1C5433DF24C38DBF00A5383B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5433DE24C38DBF00A5383B /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1C5433E224C3A33600A5383B /* SwiftUIExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5433E124C3A33600A5383B /* SwiftUIExampleView.swift */; };
+		294248E029BBC8700015E00C /* CustomTextMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294248DF29BBC8700015E00C /* CustomTextMessageContentCell.swift */; };
+		294248E229BBF7090015E00C /* MessageWithAttachmentCell_bk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294248E129BBF7090015E00C /* MessageWithAttachmentCell_bk.swift */; };
 		383B9EB32172A1C4008AB91A /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B9EB22172A1C4008AB91A /* MockUser.swift */; };
 		385C2922211FF32E0010B4BA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385C2920211FF32E0010B4BA /* CustomCell.swift */; };
 		385C2923211FF32E0010B4BA /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385C2921211FF32E0010B4BA /* TableViewCells.swift */; };
@@ -48,7 +50,6 @@
 		9B49D52D263C3E1F008804B5 /* CustomTextLayoutSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D52C263C3E1F008804B5 /* CustomTextLayoutSizeCalculator.swift */; };
 		9B49D53A263D9606008804B5 /* CustomLayoutSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D539263D9606008804B5 /* CustomLayoutSizeCalculator.swift */; };
 		9B49D542263DA6F9008804B5 /* CustomMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D541263DA6F9008804B5 /* CustomMessageContentCell.swift */; };
-		9B49D547263DAA29008804B5 /* CustomTextMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D546263DAA29008804B5 /* CustomTextMessageContentCell.swift */; };
 		ABCBBB1428F57513008955E4 /* InputBarAccessoryView in Frameworks */ = {isa = PBXBuildFile; productRef = ABCBBB1328F57513008955E4 /* InputBarAccessoryView */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,8 @@
 		1C5433DC24C389C300A5383B /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		1C5433DE24C38DBF00A5383B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		1C5433E124C3A33600A5383B /* SwiftUIExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExampleView.swift; sourceTree = "<group>"; };
+		294248DF29BBC8700015E00C /* CustomTextMessageContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextMessageContentCell.swift; sourceTree = "<group>"; };
+		294248E129BBF7090015E00C /* MessageWithAttachmentCell_bk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageWithAttachmentCell_bk.swift; sourceTree = "<group>"; };
 		383B9EB22172A1C4008AB91A /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		385C2920211FF32E0010B4BA /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		385C2921211FF32E0010B4BA /* TableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
@@ -116,7 +119,6 @@
 		9B49D52C263C3E1F008804B5 /* CustomTextLayoutSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLayoutSizeCalculator.swift; sourceTree = "<group>"; };
 		9B49D539263D9606008804B5 /* CustomLayoutSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutSizeCalculator.swift; sourceTree = "<group>"; };
 		9B49D541263DA6F9008804B5 /* CustomMessageContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageContentCell.swift; sourceTree = "<group>"; };
-		9B49D546263DAA29008804B5 /* CustomTextMessageContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextMessageContentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,8 +175,9 @@
 				032A15E125965E1100E00FE3 /* CameraInputBarAccessoryView.swift */,
 				385C2920211FF32E0010B4BA /* CustomCell.swift */,
 				9B49D541263DA6F9008804B5 /* CustomMessageContentCell.swift */,
-				9B49D546263DAA29008804B5 /* CustomTextMessageContentCell.swift */,
+				294248DF29BBC8700015E00C /* CustomTextMessageContentCell.swift */,
 				385C2921211FF32E0010B4BA /* TableViewCells.swift */,
+				294248E129BBF7090015E00C /* MessageWithAttachmentCell_bk.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -492,7 +495,6 @@
 				385C2932211FF3630010B4BA /* UIViewController+Extensions.swift in Sources */,
 				138A04D428254AD300E2780F /* CustomInputBarExampleViewController.swift in Sources */,
 				385C292B211FF3450010B4BA /* Settings+UserDefaults.swift in Sources */,
-				9B49D547263DAA29008804B5 /* CustomTextMessageContentCell.swift in Sources */,
 				9B49D528263C31FC008804B5 /* CustomLayoutExampleViewController.swift in Sources */,
 				032A15DD25965D9A00E00FE3 /* AlertService.swift in Sources */,
 				385C2948211FF38F0010B4BA /* ChatViewController.swift in Sources */,
@@ -502,11 +504,13 @@
 				385C2927211FF33B0010B4BA /* MockSocket.swift in Sources */,
 				385C2947211FF38F0010B4BA /* BasicExampleViewController.swift in Sources */,
 				1C5433DD24C389C300A5383B /* MessagesView.swift in Sources */,
+				294248E229BBF7090015E00C /* MessageWithAttachmentCell_bk.swift in Sources */,
 				882B5E811CF7D53600B6E160 /* AppDelegate.swift in Sources */,
 				385C292D211FF3520010B4BA /* CustomMessageFlowLayout.swift in Sources */,
 				032A15E225965E1100E00FE3 /* CameraInputBarAccessoryView.swift in Sources */,
 				38CCCC592258419300DD5482 /* AutocompleteExampleViewController.swift in Sources */,
 				63ECDAC2241889630016C349 /* MessageSubviewContainerViewController.swift in Sources */,
+				294248E029BBC8700015E00C /* CustomTextMessageContentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
