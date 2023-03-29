@@ -71,7 +71,7 @@ extension BasicExampleViewController: MessagesDisplayDelegate {
   }
 
   func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at _: IndexPath, in _: MessagesCollectionView) {
-    let avatar = SampleData.shared.getAvatarFor(sender: message.sender)
+    let avatar = SampleData.shared.getAvatarFor(sender: message.senderMessageKit)
     avatarView.set(avatar: avatar)
   }
 

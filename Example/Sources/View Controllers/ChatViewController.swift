@@ -176,7 +176,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
   }
 
   func messageTopLabelAttributedText(for message: MessageType, at _: IndexPath) -> NSAttributedString? {
-    let name = message.sender.displayName
+    let name = message.senderMessageKit.displayName
     return NSAttributedString(
       string: name,
       attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])

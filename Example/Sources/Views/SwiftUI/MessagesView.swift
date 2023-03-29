@@ -111,7 +111,7 @@ extension MessagesView.Coordinator: MessagesDataSource {
   }
 
   func messageTopLabelAttributedText(for message: MessageType, at _: IndexPath) -> NSAttributedString? {
-    let name = message.sender.displayName
+    let name = message.senderMessageKit.displayName
     return NSAttributedString(
       string: name,
       attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
@@ -149,7 +149,7 @@ extension MessagesView.Coordinator: InputBarAccessoryViewDelegate {
 
 extension MessagesView.Coordinator: MessagesLayoutDelegate, MessagesDisplayDelegate {
   func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at _: IndexPath, in _: MessagesCollectionView) {
-    let avatar = SampleData.shared.getAvatarFor(sender: message.sender)
+    let avatar = SampleData.shared.getAvatarFor(sender: message.senderMessageKit)
     avatarView.set(avatar: avatar)
   }
 

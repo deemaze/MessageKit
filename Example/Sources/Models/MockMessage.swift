@@ -171,7 +171,7 @@ internal struct MockMessage: MessageType {
 
   var user: MockUser
 
-  var sender: SenderType {
+  var senderMessageKit: SenderType {
     user
   }
 }

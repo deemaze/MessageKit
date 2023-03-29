@@ -133,7 +133,7 @@ struct MockMessage: MessageType {
   var kind: MessageKind
   var user: MockUser
 
-  var sender: SenderType {
+  var senderMessageKit: SenderType {
     user
   }
 }

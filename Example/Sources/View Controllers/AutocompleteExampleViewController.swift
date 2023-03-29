@@ -171,7 +171,7 @@ final class AutocompleteExampleViewController: ChatViewController {
 
   override func messageTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
     if !isPreviousMessageSameSender(at: indexPath) {
-      let name = message.sender.displayName
+      let name = message.senderMessageKit.displayName
       return NSAttributedString(
         string: name,
         attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
@@ -373,7 +373,7 @@ extension AutocompleteExampleViewController: MessagesDisplayDelegate {
     at indexPath: IndexPath,
     in _: MessagesCollectionView)
   {
-    let avatar = SampleData.shared.getAvatarFor(sender: message.sender)
+    let avatar = SampleData.shared.getAvatarFor(sender: message.senderMessageKit)
     avatarView.set(avatar: avatar)
     avatarView.isHidden = isNextMessageSameSender(at: indexPath)
     avatarView.layer.borderWidth = 2
