@@ -354,4 +354,10 @@ open class MessagesCollectionViewFlowLayout: UICollectionViewFlowLayout {
   private func handleOrientationChange(_: Notification) {
     invalidateLayout()
   }
+
+  open override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+      let attributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath)
+      attributes?.alpha = 0.0 // Apply custom animation, e.g., fade-in effect
+      return attributes
+  }
 }
