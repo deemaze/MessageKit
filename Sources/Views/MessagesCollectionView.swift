@@ -23,6 +23,12 @@
 import Foundation
 import UIKit
 
+/// Protocol to provide RTL (Right-to-Left) language support for MessageKit
+public protocol RTLLanguageProvider: AnyObject {
+    /// Returns `true` if the current language is RTL (Right-to-Left)
+    var isRTLLanguage: Bool { get }
+}
+
 open class MessagesCollectionView: UICollectionView {
   // MARK: Lifecycle
 
@@ -54,6 +60,8 @@ open class MessagesCollectionView: UICollectionView {
   open weak var messagesLayoutDelegate: MessagesLayoutDelegate?
 
   open weak var messageCellDelegate: MessageCellDelegate?
+
+  open weak var rtlLanguageProvider: RTLLanguageProvider?
 
   open var isTypingIndicatorHidden: Bool {
     messagesCollectionViewFlowLayout.isTypingIndicatorViewHidden
