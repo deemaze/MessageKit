@@ -123,13 +123,27 @@ open class MessageSizeCalculator: CellSizeCalculator {
   open func avatarPosition(for message: MessageType) -> AvatarPosition {
     let dataSource = messagesLayout.messagesDataSource
     let isFromCurrentSender = dataSource.isFromCurrentSender(message: message)
-    var position = isFromCurrentSender ? outgoingAvatarPosition : incomingAvatarPosition
+
+    // Check if RTL mode is active
+    let isRTL = messagesLayout.messagesCollectionView.rtlLanguageProvider?.isRTLLanguage ?? false
+
+    // In RTL, swap incoming/outgoing positions
+    var position: AvatarPosition
+    if isRTL {
+      position = isFromCurrentSender ? incomingAvatarPosition : outgoingAvatarPosition
+    } else {
+      position = isFromCurrentSender ? outgoingAvatarPosition : incomingAvatarPosition
+    }
 
     switch position.horizontal {
     case .cellTrailing, .cellLeading:
       break
     case .natural:
-      position.horizontal = isFromCurrentSender ? .cellTrailing : .cellLeading
+      if isRTL {
+        position.horizontal = isFromCurrentSender ? .cellLeading : .cellTrailing
+      } else {
+        position.horizontal = isFromCurrentSender ? .cellTrailing : .cellLeading
+      }
     }
     return position
   }
@@ -157,7 +171,16 @@ open class MessageSizeCalculator: CellSizeCalculator {
   open func cellTopLabelAlignment(for message: MessageType) -> LabelAlignment {
     let dataSource = messagesLayout.messagesDataSource
     let isFromCurrentSender = dataSource.isFromCurrentSender(message: message)
-    return isFromCurrentSender ? outgoingCellTopLabelAlignment : incomingCellTopLabelAlignment
+
+    // Check if RTL mode is active
+    let isRTL = messagesLayout.messagesCollectionView.rtlLanguageProvider?.isRTLLanguage ?? false
+
+    // In RTL, swap incoming/outgoing alignments
+    if isRTL {
+      return isFromCurrentSender ? incomingCellTopLabelAlignment : outgoingCellTopLabelAlignment
+    } else {
+      return isFromCurrentSender ? outgoingCellTopLabelAlignment : incomingCellTopLabelAlignment
+    }
   }
 
   // MARK: - Top message Label
@@ -179,7 +202,16 @@ open class MessageSizeCalculator: CellSizeCalculator {
 
     let dataSource = messagesLayout.messagesDataSource
     let isFromCurrentSender = dataSource.isFromCurrentSender(message: message)
-    return isFromCurrentSender ? outgoingMessageTopLabelAlignment : incomingMessageTopLabelAlignment
+
+    // Check if RTL mode is active
+    let isRTL = collectionView.rtlLanguageProvider?.isRTLLanguage ?? false
+
+    // In RTL, swap incoming/outgoing alignments
+    if isRTL {
+      return isFromCurrentSender ? incomingMessageTopLabelAlignment : outgoingMessageTopLabelAlignment
+    } else {
+      return isFromCurrentSender ? outgoingMessageTopLabelAlignment : incomingMessageTopLabelAlignment
+    }
   }
 
   // MARK: - Message time label
@@ -205,7 +237,16 @@ open class MessageSizeCalculator: CellSizeCalculator {
   open func cellBottomLabelAlignment(for message: MessageType) -> LabelAlignment {
     let dataSource = messagesLayout.messagesDataSource
     let isFromCurrentSender = dataSource.isFromCurrentSender(message: message)
-    return isFromCurrentSender ? outgoingCellBottomLabelAlignment : incomingCellBottomLabelAlignment
+
+    // Check if RTL mode is active
+    let isRTL = messagesLayout.messagesCollectionView.rtlLanguageProvider?.isRTLLanguage ?? false
+
+    // In RTL, swap incoming/outgoing alignments
+    if isRTL {
+      return isFromCurrentSender ? incomingCellBottomLabelAlignment : outgoingCellBottomLabelAlignment
+    } else {
+      return isFromCurrentSender ? outgoingCellBottomLabelAlignment : incomingCellBottomLabelAlignment
+    }
   }
 
   // MARK: - Bottom Message Label
@@ -227,7 +268,16 @@ open class MessageSizeCalculator: CellSizeCalculator {
 
     let dataSource = messagesLayout.messagesDataSource
     let isFromCurrentSender = dataSource.isFromCurrentSender(message: message)
-    return isFromCurrentSender ? outgoingMessageBottomLabelAlignment : incomingMessageBottomLabelAlignment
+
+    // Check if RTL mode is active
+    let isRTL = collectionView.rtlLanguageProvider?.isRTLLanguage ?? false
+
+    // In RTL, swap incoming/outgoing alignments
+    if isRTL {
+      return isFromCurrentSender ? incomingMessageBottomLabelAlignment : outgoingMessageBottomLabelAlignment
+    } else {
+      return isFromCurrentSender ? outgoingMessageBottomLabelAlignment : incomingMessageBottomLabelAlignment
+    }
   }
 
   // MARK: - MessageContainer
@@ -235,7 +285,16 @@ open class MessageSizeCalculator: CellSizeCalculator {
   open func messageContainerPadding(for message: MessageType) -> UIEdgeInsets {
     let dataSource = messagesLayout.messagesDataSource
     let isFromCurrentSender = dataSource.isFromCurrentSender(message: message)
-    return isFromCurrentSender ? outgoingMessagePadding : incomingMessagePadding
+
+    // Check if RTL mode is active
+    let isRTL = messagesLayout.messagesCollectionView.rtlLanguageProvider?.isRTLLanguage ?? false
+
+    // In RTL, swap incoming/outgoing paddings
+    if isRTL {
+      return isFromCurrentSender ? incomingMessagePadding : outgoingMessagePadding
+    } else {
+      return isFromCurrentSender ? outgoingMessagePadding : incomingMessagePadding
+    }
   }
 
   open func messageContainerSize(for _: MessageType, at _: IndexPath) -> CGSize {
